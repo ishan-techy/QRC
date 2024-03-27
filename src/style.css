@@ -61,11 +61,11 @@
 .hello div div svg path {
   display: none;
 }
-/* .helloone {
+.helloone {
   display: flex;
   align-items: center;
   justify-content: center;
-} */
+}
 .heading {
   position: absolute;
   z-index: 11;
