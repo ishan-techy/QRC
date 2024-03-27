@@ -28,7 +28,10 @@
   object-fit: cover !important;
 }
 .hello div svg {
-  /* display: none; */
+  display: none;
+}
+.hello div div svg {
+  display: block;
   z-index: 1111;
 }
 .helloone {
