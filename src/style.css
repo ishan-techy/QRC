@@ -49,10 +49,8 @@
 }
 .hello div div svg::before {
   content: "";
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
+
   background-color: rgba(245, 245, 245, 0.15);
   backdrop-filter: blur(10px);
   border-radius: 50%;
