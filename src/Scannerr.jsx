@@ -10,17 +10,33 @@ import LinkIcon from '@material-ui/icons/Link';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
 import ShareIcon from '@material-ui/icons/Share';
 
+
+
 class Scannerr extends Component {
     constructor(props) {
         super(props);
         this.state = {
             result: 'No result',
             open: false,
-            on: false
+            on: false,
+            flashlightOn: false
         }
         this.handleError = this.handleError.bind(this);
         this.handleScan = this.handleScan.bind(this);
     }
+    toggleFlashlight = async () => {
+        try {
+            if ('torch' in navigator) {
+                const { flashlightOn } = this.state;
+                this.setState({ flashlightOn: !flashlightOn });
+                await navigator.torch.toggle();
+            } else {
+                console.error('Torch API not supported');
+            }
+        } catch (error) {
+            console.error('Error toggling flashlight:', error);
+        }
+    };
 
     handleScan = data => {
         if (data) {
@@ -29,6 +45,12 @@ class Scannerr extends Component {
         }
     }
 
+    handleTorchToggle = () => {
+        const { switchTorch } = this.scanner;
+        if (switchTorch) {
+            switchTorch(true);
+        }
+    };
     handleError = err => {
         console.error(err)
     }
@@ -67,10 +89,10 @@ class Scannerr extends Component {
                         <div className='b3'></div>
                         <div className='b4'></div>
                         <div className="hello">
-                            <Scanner onResult={(text) => this.handleScan(text)} switchTorch={true} />
+                            <Scanner onResult={(text) => this.handleScan(text)} />
                         </div>
                         <div className='torchContainer'>
-                            <IconButton>
+                            <IconButton onClick={this.toggleFlashlight}>
                                 <img className='torch' src={TorchIcon} alt="" />
                             </IconButton>
                         </div>
