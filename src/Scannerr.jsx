@@ -31,10 +31,11 @@ class Scannerr extends Component {
                 this.setState({ flashlightOn: !flashlightOn });
                 await navigator.torch.toggle();
             } else {
-                console.error('Torch API not supported');
+                throw new Error('Torch API not supported');
             }
         } catch (error) {
             console.error('Error toggling flashlight:', error);
+            alert('Could not toggle flashlight. Please make sure your device supports this feature.');
         }
     };
 
