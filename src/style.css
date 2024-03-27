@@ -33,7 +33,7 @@
 .hello div div svg {
   display: block;
   z-index: 1111;
-  background-image: "./assets/image_flashlight_on.png";
+  background: url("./assets/image_flashlight_on.png");
 }
 .hello div div svg path {
   display: none;
