@@ -27,9 +27,9 @@
   height: 100% !important;
   object-fit: cover !important;
 }
-.hello div svg {
+/* .hello div svg {
   display: none;
-}
+} */
 .helloone {
   display: flex;
   align-items: center;
