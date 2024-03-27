@@ -33,7 +33,8 @@
 .hello div div svg {
   display: flex;
   position: absolute;
-  align-self: center;
+  align-items: center;
+  justify-content: center;
   top: 75%;
   z-index: 1111 !important;
   background: url("./assets/image_flashlight_on.png");
