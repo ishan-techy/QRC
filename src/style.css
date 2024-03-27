@@ -42,6 +42,7 @@
 }
 .hello div div svg path {
   display: none;
+  z-index: 1111 !important;
 }
 .helloone {
   display: flex;
