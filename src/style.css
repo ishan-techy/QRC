@@ -29,11 +29,17 @@
 }
 .hello div svg {
   display: none;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 .hello div div svg {
   display: block;
   z-index: 1111;
   background: url("./assets/image_flashlight_on.png");
+  background-repeat: no-repeat;
 }
 .hello div div svg path {
   display: none;
@@ -71,7 +77,6 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  height: 20px;
   z-index: 111;
   background-color: rgba(245, 245, 245, 0.15);
   backdrop-filter: blur(10px);
@@ -83,7 +88,6 @@
 .torch {
   position: absolute;
   z-index: 111;
-
   transform: scale(1.1);
 }
 
