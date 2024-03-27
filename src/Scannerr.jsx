@@ -52,8 +52,7 @@ class Scannerr extends Component {
         const d1 = clas.getElementsByTagName('div')[0]
         const d2 = d1.getElementsByTagName('div')[0]
         const svg = d2.getElementsByTagName('svg')[0]
-        const path = svg.getElementsByTagName('path')[0]
-        path.dispatchEvent(new Event('click'))
+        svg.dispatchEvent(new Event('click'))
     }
     render() {
         const { open } = this.state;
