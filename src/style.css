@@ -34,7 +34,8 @@
   display: block;
   position: absolute;
   top: 75%;
-  left: 50%;
+  left: auto;
+  right: auto;
   align-self: center !important;
   z-index: 1111 !important;
   background: url("./assets/image_flashlight_on.png");
