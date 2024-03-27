@@ -31,8 +31,9 @@
   display: none;
 }
 .hello div div svg {
-  display: block;
+  display: flex;
   position: absolute;
+  align-self: center;
   top: 75%;
   z-index: 1111 !important;
   background: url("./assets/image_flashlight_on.png");
