@@ -28,8 +28,13 @@
   object-fit: cover !important;
 }
 .hello div svg {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 1 !important;
 }
+
 .hello div div svg {
   display: block;
   position: absolute;
@@ -38,11 +43,10 @@
   right: auto;
   align-self: center !important;
   z-index: 1111 !important;
-
+  background: url("./assets/image_flashlight_on.png");
   background-repeat: no-repeat;
 }
 .hello div div svg path {
-  background: url("./assets/image_flashlight_on.png");
   z-index: 1111 !important;
 }
 .helloone {
