@@ -33,7 +33,6 @@
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  display: none !important;
 }
 .hello div div svg {
   display: block;
