@@ -10,34 +10,17 @@ import LinkIcon from '@material-ui/icons/Link';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
 import ShareIcon from '@material-ui/icons/Share';
 
-
-
 class Scannerr extends Component {
     constructor(props) {
         super(props);
         this.state = {
             result: 'No result',
             open: false,
-            on: false,
-            flashlightOn: false
+            on: false
         }
         this.handleError = this.handleError.bind(this);
         this.handleScan = this.handleScan.bind(this);
     }
-    toggleFlashlight = async () => {
-        try {
-            if ('torch' in navigator) {
-                const { flashlightOn } = this.state;
-                this.setState({ flashlightOn: !flashlightOn });
-                await navigator.torch.toggle();
-            } else {
-                throw new Error('Torch API not supported');
-            }
-        } catch (error) {
-            console.error('Error toggling flashlight:', error);
-            alert('Could not toggle flashlight. Please make sure your device supports this feature.');
-        }
-    };
 
     handleScan = data => {
         if (data) {
@@ -46,12 +29,6 @@ class Scannerr extends Component {
         }
     }
 
-    handleTorchToggle = () => {
-        const { switchTorch } = this.scanner;
-        if (switchTorch) {
-            switchTorch(true);
-        }
-    };
     handleError = err => {
         console.error(err)
     }
@@ -90,10 +67,10 @@ class Scannerr extends Component {
                         <div className='b3'></div>
                         <div className='b4'></div>
                         <div className="hello">
-                            <Scanner onResult={(text) => this.handleScan(text)} />
+                            <Scanner onResult={(text) => this.handleScan(text)} switchTorch={true} />
                         </div>
                         <div className='torchContainer'>
-                            <IconButton onClick={this.toggleFlashlight}>
+                            <IconButton>
                                 <img className='torch' src={TorchIcon} alt="" />
                             </IconButton>
                         </div>
