@@ -32,6 +32,9 @@
 }
 .hello div div {
   z-index: 9999 !important;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .hello div div svg {
