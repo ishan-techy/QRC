@@ -73,13 +73,13 @@ class Scannerr extends Component {
                         <div className='b2'></div>
                         <div className='b3'></div>
                         <div className='b4'></div>
+                        <div className='torchContainer'>
+                            <IconButton onClick={this.handleTorch}>
+                                <img className='torch' src={TorchIcon} alt="" />
+                            </IconButton>
+                        </div>
                         <div className="hello">
                             <Scanner onResult={(text) => this.handleScan(text)} />
-                            <div className='torchContainer'>
-                                <IconButton onClick={this.handleTorch}>
-                                    <img className='torch' src={TorchIcon} alt="" />
-                                </IconButton>
-                            </div>
                         </div>
                     </div> :
                     <div className='generatedQR'>
