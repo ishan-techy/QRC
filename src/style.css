@@ -33,7 +33,7 @@
 .hello div div {
   z-index: 9999 !important;
   display: flex;
-  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
