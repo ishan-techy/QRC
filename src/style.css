@@ -31,19 +31,16 @@
   display: none;
 }
 .hello div div svg {
-  display: flex;
+  display: block;
   position: absolute;
-  align-items: center;
-  justify-content: center;
-  top: 75%;
-  height: 100vh;
-  width: 100%;
+  align-self: center !important;
+  bottom: 11%;
   z-index: 1111 !important;
   background: url("./assets/image_flashlight_on.png");
   background-repeat: no-repeat;
 }
 .hello div div svg path {
-  /* display: none; */
+  display: none;
 }
 .helloone {
   display: flex;
