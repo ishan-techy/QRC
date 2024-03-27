@@ -34,6 +34,9 @@
   display: block;
   z-index: 1111;
 }
+.hello div div svg path {
+  display: none;
+}
 .helloone {
   display: flex;
   align-items: center;
