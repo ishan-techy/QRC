@@ -28,11 +28,7 @@
   object-fit: cover !important;
 }
 .hello div svg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  z-index: 1 !important;
+  display: none;
 }
 
 .hello div div svg {
