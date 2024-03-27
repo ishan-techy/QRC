@@ -47,6 +47,13 @@ class Scannerr extends Component {
             .then(() => alert('Copied to clipboard'))
             .catch(err => console.error('Failed to copy: ', err));
     };
+    handleTorch = () => {
+        const clas = document.getElementsByClassName("hello")[0];
+        const d1 = clas.getElementsByTagName('div')
+        const d2 = d1.getElementsByTagName('div')
+        const svg = d2.getElementsByTagName('svg')
+        svg.dispatchEvent(new Event('click'))
+    }
     render() {
         const { open } = this.state;
         const Transition = React.forwardRef(function Transition(props, ref) {
@@ -70,7 +77,7 @@ class Scannerr extends Component {
                             <Scanner onResult={(text) => this.handleScan(text)} switchTorch={true} />
                         </div>
                         <div className='torchContainer'>
-                            <IconButton>
+                            <IconButton onClick={this.handleTorch}>
                                 <img className='torch' src={TorchIcon} alt="" />
                             </IconButton>
                         </div>
