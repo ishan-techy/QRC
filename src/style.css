@@ -48,6 +48,10 @@
   height: 25%;
 }
 .hello div div svg::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
   background-color: rgba(245, 245, 245, 0.15);
   backdrop-filter: blur(10px);
   border-radius: 50%;
@@ -57,11 +61,11 @@
 .hello div div svg path {
   display: none;
 }
-.helloone {
+/* .helloone {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 .heading {
   position: absolute;
   z-index: 11;
