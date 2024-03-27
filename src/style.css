@@ -38,11 +38,11 @@
   right: auto;
   align-self: center !important;
   z-index: 1111 !important;
-  background: url("./assets/image_flashlight_on.png");
+
   background-repeat: no-repeat;
 }
 .hello div div svg path {
-  display: none;
+  background: url("./assets/image_flashlight_on.png");
   z-index: 1111 !important;
 }
 .helloone {
