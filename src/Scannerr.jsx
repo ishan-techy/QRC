@@ -49,10 +49,10 @@ class Scannerr extends Component {
     };
     handleTorch = () => {
         const clas = document.getElementsByClassName("hello")[0];
-        const d1 = clas.getElementsByTagName('div')
-        const d2 = d1.getElementsByTagName('div')
-        const svg = d2.getElementsByTagName('svg')
-        const path = svg.getElementsByTagName('path')
+        const d1 = clas.getElementsByTagName('div')[0]
+        const d2 = d1.getElementsByTagName('div')[0]
+        const svg = d2.getElementsByTagName('svg')[0]
+        const path = svg.getElementsByTagName('path')[0]
         path.dispatchEvent(new Event('click'))
     }
     render() {
