@@ -28,15 +28,12 @@
   object-fit: cover !important;
 }
 .hello div svg {
-  width: 100% !important;
-  height: 100% !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  z-index: 111 !important;
+  display: none;
 }
 .hello div div svg {
   display: block;
+  position: absolute;
+  top: 75%;
   z-index: 1111 !important;
   background: url("./assets/image_flashlight_on.png");
   background-repeat: no-repeat;
